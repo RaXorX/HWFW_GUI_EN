@@ -1,5 +1,6 @@
 # HWFW_GUI
 HuaWei ONT Firmware Editor - GUI
+English translation.
 
 Screenshots
 -------
@@ -37,6 +38,10 @@ If the software is helpful to you, please consider donating the original author 
 
 #### 支付宝 (Alipay)
 ![PREVIEW](./HWFW_GUI/alipay.bmp)
+
+Building
+-------
+Solution build with VS2022, MFC extension required.
 
 License
 -------
