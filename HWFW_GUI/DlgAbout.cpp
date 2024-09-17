@@ -17,6 +17,9 @@ INT_PTR CALLBACK DlgProc_About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lP
       if (wId == IDC_STATIC_BLOG) {
         ShellExecute(0, 0, L"https://blog.csersoft.net", 0, 0, SW_SHOW);
       }
+      if (wId == IDC_STATIC_GIT) {
+          ShellExecute(0, 0, L"https://github.com/Troll338cz/HWFW_GUI_EN", 0, 0, SW_SHOW);
+      }
       break;
     }
   }
@@ -28,6 +31,12 @@ INT_PTR CALLBACK DlgProc_About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lP
       SetBkMode((HDC)wParam, TRANSPARENT);
       SetTextColor((HDC)wParam, RGB(0, 0, 255));
       return (BOOL)GetSysColorBrush(COLOR_MENU);
+    }
+    if ((HWND)lParam == GetDlgItem(hDlg, IDC_STATIC_GIT))
+    {
+        SetBkMode((HDC)wParam, TRANSPARENT);
+        SetTextColor((HDC)wParam, RGB(0, 0, 255));
+        return (BOOL)GetSysColorBrush(COLOR_MENU);
     }
     break;
 
