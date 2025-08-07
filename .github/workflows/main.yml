@@ -1,4 +1,4 @@
-name: Build HWFW_GUI
+name: Build HWFW_GUI Release
 
 on:
   push:
@@ -19,11 +19,5 @@ jobs:
       with:
         vs-version: '15.0'
 
-    - name: Build Debug
-      run: msbuild HWFW_GUI.sln /p:Configuration=Debug /p:Platform=Win32
-
-    - name: Build Release
-      run: msbuild HWFW_GUI.sln /p:Configuration=Release /p:Platform=Win32
-
-    - name: Build Release_LLVM
-      run: msbuild HWFW_GUI.sln /p:Configuration=Release_LLVM /p:Platform=Win32
+    - name: Build Release (x86)
+      run: msbuild HWFW_GUI.sln /p:Configuration=Release /p:Platform=x86
